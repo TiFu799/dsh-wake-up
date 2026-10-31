@@ -1,0 +1,4 @@
+# dsh-wake-up —— 按需叫醒休眠会话
+- insert:
+    - id: wake-up
+      name: 'dsh-wake-up'
