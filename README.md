@@ -56,12 +56,13 @@ export function apply(ctx) {
 
 ## 安装
 
-在市场里搜 `dsh-wake-up`，或者：
+从 GitHub 装（现在就能用）：
 
 ```sh
-dsh plugin add dsh-wake-up --profile desktop
+dsh plugin add github:TiFu799/dsh-wake-up --profile desktop
 ```
 
+收录进市场之后，也可以直接在市场里搜 `dsh-wake-up` 一键安装。
 装完刷新页面即可，不需要重启。
 
 ## 配置（可选）
