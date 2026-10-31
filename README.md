@@ -56,13 +56,23 @@ export function apply(ctx) {
 
 ## 安装
 
-从 GitHub 装（现在就能用）：
+市场收录之后：在市场里搜 `dsh-wake-up` 一键装（命令行 `dsh plugin add dsh-wake-up --profile desktop` 等价）。
+
+收录之前：市场只接受已收录的插件，想先试就在本仓库里打包再装进 profile：
 
 ```sh
-dsh plugin add github:TiFu799/dsh-wake-up --profile desktop
+pnpm pack                                  # 产出 dsh-wake-up-0.1.0.tgz
+cd ~/.dsh/profiles/desktop && pnpm add <上面的 tgz 路径>
 ```
 
-收录进市场之后，也可以直接在市场里搜 `dsh-wake-up` 一键安装。
+然后把下面这段加进 profile 的 `cordis.patch.yml`（插件本身按 `dsh.bundle.patch` 自动挂载，这一步只是让它被 profile 认识）：
+
+```yaml
+- insert:
+    - id: wake-up
+      name: dsh-wake-up
+```
+
 装完刷新页面即可，不需要重启。
 
 ## 配置（可选）
