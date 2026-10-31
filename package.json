@@ -1,0 +1,40 @@
+{
+  "name": "dsh-wake-up",
+  "version": "0.1.0",
+  "description": "按需叫醒休眠的 DSH 会话：带模型路由 resume，给端口也给工具。外部消息投进没打开的会话时，不再卡在「那间会话现在没活着」。",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.5": "compatible"
+      }
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "session",
+    "resume",
+    "wake"
+  ]
+}
